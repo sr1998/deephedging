@@ -212,7 +212,7 @@ class VanillaDeepHedgingGym(tf.keras.Model):
         # --------------
             
         return pdct(
-            loss     = -utility-utility0,                         # [?,]
+            loss     = -utility+utility0,                         # [?,]
             utility  = tf.stop_gradient( utility ),               # [?,]
             utility0 = tf.stop_gradient( utility0 ),              # [?,]
             gains    = tf.stop_gradient( payoff + pnl - cost ),   # [?,]
